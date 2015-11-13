@@ -4,12 +4,9 @@ function CompareNumber(){
 CompareNumber.prototype.compare = function (input, answer) {
   var aCount = 0;
   for (var i = 0; i < input.length; i++) {
-    if (answer[i] !== input[i]) {
+    if (answer[i] === input[i]) {
       aCount++;
     }
-  }
-  if (aCount === 4) {
-    return "4A0B";
   }
   var bCount = 0;
   for (var i = 0; i < input.length; i++) {
@@ -17,9 +14,8 @@ CompareNumber.prototype.compare = function (input, answer) {
       bCount++;
     }
   }
-  if (bCount === 0) {
-    return "0A0B";
-  }
+
+  return aCount + "A" + (bCount - aCount) + "B";
 };
 
 module.exports = CompareNumber;

@@ -24,4 +24,24 @@ describe("game: GuessNumber ", function () {
 
     expect(result).to.equal("0A0B");
   });
+
+  it("should return 0A4B when input is 1234 and answer is 4321", function() {
+    var input = "1234";
+    var answer = "4321";
+
+    var compareNumber = new CompareNumber();
+    var result = compareNumber.compare(input, answer);
+
+    expect(result).to.equal("0A4B");
+  });
+
+  it("should return 1A1B when input is 1234 and answer is 1456", function() {
+    var input = "1234";
+    var answer = "1456";
+
+    var compareNumber = new CompareNumber();
+    var result = compareNumber.compare(input, answer);
+
+    expect(result).to.equal("1A1B");
+  })
 });
