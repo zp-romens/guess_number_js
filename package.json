@@ -11,6 +11,7 @@
   "dependencies": {
     "chai": "^3.4.1",
     "jasmine": "^2.3.2",
+    "jsmockito": "^1.0.5",
     "mocha": "^2.3.3"
   }
 }
