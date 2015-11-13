@@ -29,6 +29,4 @@ describe("game: AnswerGenerator ", function () {
       expect(answer.indexOf(answer[i])).to.equal(answer.lastIndexOf(answer[i]));
     }
   });
-
-
 });
