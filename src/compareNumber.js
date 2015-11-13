@@ -2,16 +2,22 @@ function CompareNumber(){
 }
 
 CompareNumber.prototype.compare = function (input, answer) {
-  if (input === answer) {
-    return "4A0B";
-  }
-  var containCount = 0;
-  for(var i = 0; i < input.length; i++) {
-    if(answer.indexOf(input[i]) !== -1) {
-      containCount++;
+  var aCount = 0;
+  for (var i = 0; i < input.length; i++) {
+    if (answer[i] !== input[i]) {
+      aCount++;
     }
   }
-  if (containCount === 0) {
+  if (aCount === 4) {
+    return "4A0B";
+  }
+  var bCount = 0;
+  for (var i = 0; i < input.length; i++) {
+    if (answer.indexOf(input[i]) !== -1) {
+      bCount++;
+    }
+  }
+  if (bCount === 0) {
     return "0A0B";
   }
 };
