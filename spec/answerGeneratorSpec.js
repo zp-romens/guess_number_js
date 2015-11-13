@@ -15,8 +15,20 @@ describe("game: AnswerGenerator ", function () {
     var answerGenerator = new AnswerGenerator();
 
     var answer = answerGenerator.generate();
-    var notNumber = isNaN(Number(answer)) ;
+    var notNumber = isNaN(Number(answer));
 
     expect(notNumber).to.equal(false);
-  })
+  });
+
+  it("should return no duplicated digits string", function () {
+    var answerGenerator = new AnswerGenerator();
+
+    var answer = answerGenerator.generate();
+
+    for(var i = 0; i < 4; i++) {
+      expect(answer.indexOf(answer[i])).to.equal(answer.lastIndexOf(answer[i]));
+    }
+  });
+
+
 });
