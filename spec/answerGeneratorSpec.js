@@ -46,7 +46,7 @@ describe("game: AnswerGenerator ", function () {
     expect(results.length).to.equal(3);
   });
 
-  it("should no repeat str in 3 times", function () {
+  xit("should no repeat str in 3 times", function () {
 
     var random = m.mockFunction();
     m.when(random).call(anything())
